@@ -12,7 +12,7 @@ export const App = ({componentsToDisplay}) => {
     console.log(views)
 
     return (
-        <React.Suspense>
+        <React.Suspense fallback="Loading views...">
              <div className="container">{views}</div>
         </React.Suspense>
     )

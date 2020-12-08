@@ -1,7 +1,7 @@
 import { lazy } from "react"
 
 export const ImportView = component => {
-    lazy(()=> import(`../components/${component}`).catch(()=>{
+    return lazy(()=> import(`../components/${component}`).catch(()=>{
         import(`../components/DefaultView`)
     }))
 }
