@@ -3,11 +3,11 @@ import { LoadViews } from "./utils/LoadViews"
 
 
 export const App = ({componentsToDisplay}) => {
-    let views = []
+    let views = LoadViews(componentsToDisplay)
 
-    useEffect(()=> {
-       views = LoadViews(componentsToDisplay)
-    },[componentsToDisplay])
+    // useEffect(()=> {
+    //    views = LoadViews(componentsToDisplay)
+    // },[componentsToDisplay])
 
     console.log(views)
 

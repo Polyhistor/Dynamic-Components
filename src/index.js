@@ -3,9 +3,15 @@ import ReactDOM from 'react-dom';
 import {App} from './App';
 import reportWebVitals from './reportWebVitals';
 
+const views = [
+  'AngularView',
+  'ReactView',
+  'VueView',
+];
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App componentsToDisplay={views}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
