@@ -1,5 +1,19 @@
-import React from "react"
+import React ,{ useEffect} from "react"
+import { LoadViews } from "./utils/LoadViews"
 
-export const App = () => {
 
+export const App = ({componentsToDisplay}) => {
+    let views = []
+
+    useEffect(()=> {
+       views = LoadViews(componentsToDisplay)
+    },[componentsToDisplay])
+
+    console.log(views)
+
+    return (
+        <React.Suspense>
+             <div className="container">{views}</div>
+        </React.Suspense>
+    )
 }
