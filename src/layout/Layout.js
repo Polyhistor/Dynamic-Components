@@ -7,7 +7,7 @@ const Container = styled.article`
   justify-content: center;
   align-items: center;
 
-  border: 2px dotted #ffc600;
+  border: 2px dotted red;
   padding: 2rem;
   margin-top: 1rem;
 `;

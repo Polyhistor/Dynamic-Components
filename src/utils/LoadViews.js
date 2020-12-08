@@ -10,9 +10,7 @@ export const LoadViews = (componentsToDisplay) =>{
             const View = await ImportView(component)
             return <View key={shortid.generate()}></View>
         })
-    
         componentsToDisplay && Promise.all(componentPromises).then(setViews)
-
     }, [componentsToDisplay])
 
     return views
